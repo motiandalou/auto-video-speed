@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Video Speed",
+  "version": "1.0",
+  "description": "自动设置视频网站倍速播放（支持 YouTube、B站、优酷）",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://www.bilibili.com/*",
+    "*://v.qq.com/*",
+    "*://*.youku.com/*",
+    "*://*.netflix.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["storage.js", "content_scripts/youtube.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://www.bilibili.com/*"],
+      "js": ["storage.js", "content_scripts/bilibili.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://v.qq.com/*"],
+      "js": ["storage.js", "content_scripts/tencent.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://*.youku.com/*"],
+      "js": ["storage.js", "content_scripts/youku.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://*.netflix.com/*"],
+      "js": ["storage.js", "content_scripts/netflix.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

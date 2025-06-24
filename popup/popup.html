@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Auto Video Speed</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f4f4f4;
+      width: 300px;
+      padding: 10px;
+    }
+
+    .header {
+      background-color: #202124;
+      color: #fff;
+      padding: 10px 15px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .container {
+      padding: 20px 10px 10px;
+      background: white;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .footer {
+      margin-top: 15px;
+      font-size: 12px;
+      text-align: center;
+      color: #888;
+    }
+
+    .buyCoffee {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .buyCoffee img {
+      margin-top: 6px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">🎬 Auto Video Speed</div>
+  <div class="container">
+    <h3>Playback Speed</h3>
+    <input id="speedInput" type="number" step="0.1" min="0.5" max="5" />
+    <button id="saveBtn">Save & Reload</button>
+  </div>
+  <div class="footer">
+    Developed by 伟仔
+  </div>
+  <!-- <div class="buyCoffee">
+    <p>Help a developer stay caffeinated — or milk tea’d 🧋</p>
+    <img src="buyMeCoffee.png" alt="Buy me coffee" width="120" />
+  </div> -->
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
